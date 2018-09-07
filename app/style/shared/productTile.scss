@@ -1,0 +1,18 @@
+.product-tile {
+  width: $product-tile-height;
+  height: $product-tile-width;
+  margin:20px;
+  display:inline-block;
+  float:left;
+  .image-container {
+
+    img {
+      display: inline-block;
+      width: 100%;
+      height:auto;
+    }
+  }
+  .description-box{
+    height: $product-container-height;
+  }
+}

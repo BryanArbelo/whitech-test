@@ -10,8 +10,16 @@ export function getAllProducts() {
   };
 }
 
-export function updateDashboardData() {
+export function gotAllProducts(data) {
   return {
-    type: UPDATE_DASHBOARD_DATA
+    type: GOT_ALL_PRODUCTS,
+    data: data
+  };
+}
+
+export function updateDashboardData(data) {
+  return {
+    type: UPDATE_DASHBOARD_DATA,
+    data : data
   };
 }

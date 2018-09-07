@@ -8,13 +8,14 @@ import { productDashboardInitialState } from '../state/initialState';
 
 function productDashboardReducer(state = productDashboardInitialState, action) {
   let newStatus;
-  const  {dashboardData} = state;
+  const  {productDashboardData} = state;
+
   switch (action.type) {
     case GOT_ALL_PRODUCTS:
-
+    
       newStatus = objectAssign({},productDashboardData, { products : action.data});
       return objectAssign({},state, {
-        dashboardData : newStatus,
+        productDashboardData : newStatus,
         loadingProducts : false
       });
     case GET_ALL_PRODUCTS:
@@ -26,7 +27,7 @@ function productDashboardReducer(state = productDashboardInitialState, action) {
 
       newStatus = objectAssign({},productDashboardData, action.data);
       return objectAssign({},state, {
-        dashboardData : newStatus
+        productDashboardData : newStatus
       });
     default:
       return state;

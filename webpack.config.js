@@ -56,7 +56,6 @@ let webpackSettings = {
   },
 };
 
-if (process.env.NODE_ENV != 'production'){
-  webpackSettings.devtool = 'eval-source-map';
-}
+  webpackSettings.devtool = 'source-map';
+
 module.exports = webpackSettings;

@@ -8,8 +8,16 @@ export default class BottomPanelProductDashboard extends Component {
   }
 
   render() {
-    return (<div>
-      bottom panel
+    const {productImage, productName, description} = this.props;
+
+    return (<div className="product-tile">
+      <div className="image-container">
+        <img src={productImage}></img>
+      </div>
+      <div className="description-box">
+        <h5>{productName}</h5>
+        <p>{description}</p>
+      </div>
     </div>)
   }
 }

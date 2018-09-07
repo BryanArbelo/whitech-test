@@ -1,14 +1,22 @@
+/**
+ * Create the store with dynamic reducers
+ */
 
 import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
+import createSagaMiddleware from 'redux-saga';
 import createReducer from './reducers/main';
+import sagas from './actions/sagas/main';
+
+const sagaMiddleware = createSagaMiddleware();
 
 export default function configureStore(initialState = {}, history) {
   const middlewares = [
+    sagaMiddleware,
     routerMiddleware(history),
   ];
 
-  // If Redux DevTools Extension is installed use it, otherwise use Redux compose
+
   const composeEnhancers =
     process.env.NODE_ENV !== 'production' &&
     typeof window === 'object' &&
@@ -17,14 +25,19 @@ export default function configureStore(initialState = {}, history) {
         shouldHotReload: true,
       })
       : compose;
+
   const store = createStore(
     createReducer(),
     initialState,
     composeEnhancers(applyMiddleware(...middlewares))
   );
 
- // Reducer registry
+  store.runSaga = sagaMiddleware.run;
   store.injectedReducers = {};
+  store.injectedSagas = {}; 
+
+  sagaMiddleware.run(sagas)
+
 
   return store;
 }

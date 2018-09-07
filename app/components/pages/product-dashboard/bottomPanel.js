@@ -7,10 +7,15 @@ export default class BottomPanelProductDashboard extends Component {
     super(props);
   }
 
+  
+
   render() {
 
-    return (<div>
-      bottom panel
+    return (<div className="product-dashboard-bottom-panel">
+     <div className="product-navigation">
+        <div>Previous Page</div>
+        <div>Next Page</div>
+     </div>
     </div>)
   }
 }

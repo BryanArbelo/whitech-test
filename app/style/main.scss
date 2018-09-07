@@ -1,6 +1,7 @@
 @import "./variables";
+@import "./colors";
 @import "./mixins";
 @import "./helpers";
 @import "./datepicker";
-@import "./colors";
-@import "./productDashboard/index";
+@import "./product-dashboard/index";
+@import "./shared/productTile";
