@@ -10,6 +10,7 @@ export default class App extends Component {
   render() {
     return (<div className="product-dashboard-app">
      <Route path="/product-dashboard" component={ProductDashboardPage}/>
+     <Route path="/whitech-test/product-dashboard" component={ProductDashboardPage}/>
      <Redirect from="/" to="product-dashboard" />
     </div>);
   }
