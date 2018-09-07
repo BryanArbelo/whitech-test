@@ -43,9 +43,9 @@ export default class BottomPanelProductDashboard extends Component {
     }
 
     return (<div className="product-navigation">
-       <span className={`${canGoback ? '': 'disabled'} hand`} onClick={handlePreviousArrow}>Previous Page</span>
+       <span className={`${canGoback ? '': 'disabled'} hand`} onClick={handlePreviousArrow}><i className="ui icon angle left"></i> Previous Page</span>
        {getCenterPageSelector()}
-     <span className={`${canGoForward ? '': 'disabled'} hand`} onClick={handleNextArrow}>Next Page</span>
+     <span className={`${canGoForward ? '': 'disabled'} hand`} onClick={handleNextArrow}> Next Page <i className="ui icon angle right"></i></span>
     </div>)
   }
 
