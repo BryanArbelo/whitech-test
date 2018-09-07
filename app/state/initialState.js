@@ -15,7 +15,7 @@ const getEmptyProduct = ()=>{
 
 export const productDashboardInitialState = {
   productDashboardData : {
-      products : [],
+      products : [getEmptyProduct ()],
       productsPerPage : productsPerPageEnum.EIGHT_PER_PAGE,
       currentNavigationPage : 1,
   },

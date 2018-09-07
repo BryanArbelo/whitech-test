@@ -54,7 +54,6 @@ export default class CenterPanelDashboard extends Component {
 
     const productsToRender = products.slice(productsStartFrom,productsUntil);
 
-    console.log(productsStartFrom,productsUntil,productsToRender);
     return (<div className="product-container">
       {productsToRender.map((product,i) =>{
         return <ProductTile key={`product${i}`} {...product}></ProductTile>

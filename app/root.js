@@ -7,6 +7,7 @@ import { Router } from 'react-router-dom';
 import configureStore from './configureStore';
 import { AppContainer } from 'react-hot-loader';
 import {Provider} from 'react-redux';
+window.logger = console; // can be later changed for a propper logger
 
 const history = createHistory();
 

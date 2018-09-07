@@ -22,7 +22,6 @@ export let getAllProductsApi = () => {
 }
 
 export function* loadAllProducts(payload) {
-  console.log('loading products')
   try {
     const data = yield call(getAllProductsApi);
     if (!data || data.error){

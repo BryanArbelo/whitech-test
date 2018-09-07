@@ -6,15 +6,6 @@ export default class TextInput extends Component {
   constructor(props) {
     super(props);
   }
-
-  renderInput = () => {
-    let {title,fieldclasses} = this.props;
-    return <div className={fieldclasses || 'field'}>
-      {title ? (<h5>{title}</h5>) :''}
-      <Input {...this.props} />
-    </div>
-  }
-
   renderDropdown = () => {
     //logger.info(this.props);
     let {title,fieldclasses} = this.props;
@@ -26,20 +17,6 @@ export default class TextInput extends Component {
     </div>
   }
 
-  renderTextArea = () => {
-    //logger.info(this.props);
-    let {title,fieldclasses} = this.props;
-    return <div className={fieldclasses || 'field'}>
-      {title ? (<h5>{title}</h5>) :''}
-      <TextArea {...this.props} >
-        {this.props.children}
-      </TextArea>
-    </div>
-  }
-
-  renderToggle = () => {
-
-  }
 
   render() {
     let itemToRender = '';
