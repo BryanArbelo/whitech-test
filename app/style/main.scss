@@ -5,3 +5,11 @@
 @import "./datepicker";
 @import "./product-dashboard/index";
 @import "./shared/productTile";
+
+
+body{
+  background-color: $backgorund-gray-color;
+  margin:20px;
+  font-family: 'Montserrat', Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
+
+}

@@ -1,18 +1,30 @@
 .product-tile {
-  width: $product-tile-height;
-  height: $product-tile-width;
-  margin:20px;
-  display:inline-block;
-  float:left;
-  .image-container {
+  width: $product-tile-width;
+  height: $product-tile-height;
 
+  background-color:white;
+  float: left;
+  margin: 20px;
+  .image-container {
+    height: $product-image-height;
+    text-align: center;
+    margin-top:10px;
     img {
       display: inline-block;
-      width: 100%;
-      height:auto;
+      width: auto;
+      height:100%;
     }
   }
   .description-box{
-    height: $product-container-height;
+    margin-top: 10px;
+    padding:15px;
+    border-top:1px solid $gray-border;
+    height: $product-description-height;
+
+    h5{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }

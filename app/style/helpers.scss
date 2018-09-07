@@ -1,19 +1,36 @@
 h4 {
   font-size:$h4size;
   color:$gray-text;
+  margin-bottom:$header-margin-bottom;
 }
 
 h5 {
   font-size:$h5size;
   color:$gray-text;
+  margin-bottom:$header-margin-bottom;
 }
 
 h6{
   font-size:$h6size;
   color:$gray-text;
+  margin-bottom:$header-margin-bottom;
 }
 
 p {
   font-size:$h6size;
   color:$gray-text;
+  margin-bottom:$header-margin-bottom;
+}
+
+label{
+  font-weight: bold;
+  font-size:$h5size;
+}
+
+.disabled{
+  color:$gray-text;
+  pointer-events: none !important;
+}
+.hand{
+  cursor:pointer !important;
 }

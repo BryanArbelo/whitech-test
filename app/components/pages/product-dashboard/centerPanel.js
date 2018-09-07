@@ -31,16 +31,16 @@ export default class CenterPanelDashboard extends Component {
         this.updateThisPageData({ productsPerPage : value})
     }
 
-    return <Input type="dropdown" className="products-per-page-dropdown" value={productsPerPage} onChange={handleProductPerPageChnage}  options={productsPerPageOptions} />
+    return <Input type="dropdown" fieldclasses="products-per-page-dropdown"  value={productsPerPage} onChange={handleProductPerPageChnage}  options={productsPerPageOptions} />
   }
 
 
   getTopMenu = ()=>{
     const {productDashboardData:{ products }} = this.props;
     return (<div className="top-menu">
+      <div><h4>All Products</h4></div>
       <div className="all-products-info">
-        <h5>All Products</h5>
-        <h6>{products.length} Products</h6>
+        <p>{products.length} Products</p>
       </div>
       {this.getProductsPerPageDropdown()}
     </div>);

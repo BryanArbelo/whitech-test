@@ -1,9 +1,13 @@
 // shared/productTile //
 $product-tile-width: 330px;
 $product-tile-height: 275px;
+$product-image-height: 175px;
+$product-description-height:80px;
 // product-dashboard/index //
-$product-container-height: 100px;
+$dashboard-top-menu-height:40px;
 // sizes //
-$h4size:18px;
+$h4size:16px;
 $h5size:13px;
-$h6size:12px;
+$h6size:11px;
+// helpers //
+$header-margin-bottom:3px;
